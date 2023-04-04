@@ -12,7 +12,7 @@ class StackedHookViewExample extends StackedView<HomeViewModel> {
   const StackedHookViewExample({Key key}) : super(key: key);
 
   @override
-  Widget builder(BuildContext context, HomeViewModel model, Widget? child) {
+  Widget builder(BuildContext context, HomeViewModel viewModel, Widget? child) {
     return Scaffold(
       body: Center(child: _HookForm()),
     );

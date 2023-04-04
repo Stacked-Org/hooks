@@ -33,7 +33,7 @@ class WithStackedHookView extends StackedView<WithStackedHookViewModel> {
 
 class _HookForm extends StackedHookView<WithStackedHookViewModel> {
   @override
-  Widget builder(BuildContext context, WithStackedHookViewModel model) {
+  Widget builder(BuildContext context, WithStackedHookViewModel viewModel) {
     final title = useTextEditingController();
     return Column(
       mainAxisSize: MainAxisSize.min,

@@ -14,7 +14,7 @@ abstract class StackedHookView<T> extends HookWidget {
         Provider.of<T>(context, listen: reactive),
       );
 
-  Widget builder(BuildContext context, T model);
+  Widget builder(BuildContext context, T viewModel);
 }
 
 @Deprecated(
