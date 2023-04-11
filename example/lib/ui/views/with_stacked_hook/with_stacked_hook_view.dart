@@ -38,8 +38,8 @@ class _HookForm extends StackedHookView<WithStackedHookViewModel> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Text('Title: ${model.title}'),
-        TextField(controller: title, onChanged: model.updateTitle)
+        Text('Title: ${viewModel.title}'),
+        TextField(controller: title, onChanged: viewModel.updateTitle)
       ],
     );
   }
