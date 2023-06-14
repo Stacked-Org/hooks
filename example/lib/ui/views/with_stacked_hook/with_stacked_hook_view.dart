@@ -33,13 +33,13 @@ class WithStackedHookView extends StackedView<WithStackedHookViewModel> {
 
 class _HookForm extends StackedHookView<WithStackedHookViewModel> {
   @override
-  Widget builder(BuildContext context, WithStackedHookViewModel model) {
+  Widget builder(BuildContext context, WithStackedHookViewModel viewModel) {
     final title = useTextEditingController();
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Text('Title: ${model.title}'),
-        TextField(controller: title, onChanged: model.updateTitle)
+        Text('Title: ${viewModel.title}'),
+        TextField(controller: title, onChanged: viewModel.updateTitle)
       ],
     );
   }
