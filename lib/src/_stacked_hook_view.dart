@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 /// build
 abstract class StackedHookView<T> extends HookWidget {
   final bool reactive;
-  const StackedHookView({Key? key, this.reactive = true}) : super(key: key);
+  const StackedHookView({super.key, this.reactive = true});
 
   @override
   Widget build(BuildContext context) => builder(
@@ -21,7 +21,7 @@ abstract class StackedHookView<T> extends HookWidget {
     'This widget will be removed by March 2023, please use the StackedHookView instead')
 abstract class HookViewModelWidget<T> extends HookWidget {
   final bool reactive;
-  const HookViewModelWidget({Key? key, this.reactive = true}) : super(key: key);
+  const HookViewModelWidget({super.key, this.reactive = true});
 
   @override
   Widget build(BuildContext context) => buildViewModelWidget(

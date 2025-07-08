@@ -1,3 +1,9 @@
+## 0.3.1
+
+- Bumps packages to latest.
+- `flutter_hooks: ^0.21.2`
+- `provider: ^6.1.5`
+
 ## 0.2.4
 Bumps packages to latest.
 

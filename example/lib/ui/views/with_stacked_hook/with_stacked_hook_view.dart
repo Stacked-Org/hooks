@@ -6,7 +6,7 @@ import 'package:stacked_hooks/stacked_hooks.dart';
 import 'with_stacked_hook_viewmodel.dart';
 
 class WithStackedHookView extends StackedView<WithStackedHookViewModel> {
-  const WithStackedHookView({Key? key}) : super(key: key);
+  const WithStackedHookView({super.key});
 
   @override
   Widget builder(
