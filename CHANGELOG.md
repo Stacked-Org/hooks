@@ -1,3 +1,10 @@
+## 0.2.4
+Bumps packages to latest.
+
+`flutter_hooks: ^0.20.5`
+`provider: ^6.1.2`
+
+
 ## 0.2.3
 - Completes the revert to the `HookViewModelWidget` to remove breaking changes
 - Reverts breaking change and instead deprecates the `HookViewModelWidget`
