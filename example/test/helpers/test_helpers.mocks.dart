@@ -554,10 +554,12 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
     String? description,
     String? cancelTitle,
     _i6.Color? cancelTitleColor,
-    String? buttonTitle = r'Ok',
+    String buttonTitle = r'Ok',
     _i6.Color? buttonTitleColor,
-    bool? barrierDismissible = false,
+    bool barrierDismissible = false,
     _i2.DialogPlatform? dialogPlatform,
+    _i4.GlobalKey<_i4.NavigatorState>? navigatorKey,
+    _i4.RouteSettings? routeSettings,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -572,6 +574,8 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
             #buttonTitleColor: buttonTitleColor,
             #barrierDismissible: barrierDismissible,
             #dialogPlatform: dialogPlatform,
+            #navigatorKey: navigatorKey,
+            #routeSettings: routeSettings,
           },
         ),
         returnValue: _i5.Future<_i2.DialogResponse<dynamic>?>.value(),
@@ -599,6 +603,11 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
     bool? useSafeArea = true,
     dynamic customData,
     R? data,
+    _i4.GlobalKey<_i4.NavigatorState>? navigatorKey,
+    _i4.RouteSettings? routeSettings,
+    _i4.Widget Function(_i4.BuildContext, _i4.Animation<double>,
+            _i4.Animation<double>, _i4.Widget)?
+        transitionBuilder,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -623,6 +632,9 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
             #useSafeArea: useSafeArea,
             #customData: customData,
             #data: data,
+            #navigatorKey: navigatorKey,
+            #routeSettings: routeSettings,
+            #transitionBuilder: transitionBuilder,
           },
         ),
         returnValue: _i5.Future<_i2.DialogResponse<T>?>.value(),
@@ -633,12 +645,13 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
   _i5.Future<_i2.DialogResponse<dynamic>?> showConfirmationDialog({
     String? title,
     String? description,
-    String? cancelTitle = r'Cancel',
+    String cancelTitle = r'Cancel',
     _i6.Color? cancelTitleColor,
-    String? confirmationTitle = r'Ok',
+    String confirmationTitle = r'Ok',
     _i6.Color? confirmationTitleColor,
-    bool? barrierDismissible = false,
+    bool barrierDismissible = false,
     _i2.DialogPlatform? dialogPlatform,
+    _i4.RouteSettings? routeSettings,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -653,6 +666,7 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
             #confirmationTitleColor: confirmationTitleColor,
             #barrierDismissible: barrierDismissible,
             #dialogPlatform: dialogPlatform,
+            #routeSettings: routeSettings,
           },
         ),
         returnValue: _i5.Future<_i2.DialogResponse<dynamic>?>.value(),

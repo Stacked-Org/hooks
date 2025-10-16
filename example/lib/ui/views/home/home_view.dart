@@ -6,7 +6,7 @@ import 'package:stacked_hooks_example/ui/common/ui_helpers.dart';
 import 'home_viewmodel.dart';
 
 class HomeView extends StackedView<HomeViewModel> {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
   Widget builder(BuildContext context, HomeViewModel viewModel, Widget? child) {
@@ -38,23 +38,23 @@ class HomeView extends StackedView<HomeViewModel> {
                   children: [
                     MaterialButton(
                       color: kcDarkGreyColor,
+                      onPressed: viewModel.goToWithStackedHook,
                       child: const Text(
                         'With Stacked Hook',
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: viewModel.goToWithStackedHook,
                     ),
                     MaterialButton(
                       color: kcDarkGreyColor,
+                      onPressed: viewModel.goToWithoutStackedHook,
                       child: const Text(
                         'Without Stacked Hook',
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: viewModel.goToWithoutStackedHook,
                     ),
                   ],
                 )
