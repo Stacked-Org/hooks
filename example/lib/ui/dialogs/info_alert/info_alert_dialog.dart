@@ -10,10 +10,10 @@ class InfoAlertDialog extends StatelessWidget {
   final Function(DialogResponse) completer;
 
   const InfoAlertDialog({
-    Key? key,
+    super.key,
     required this.request,
     required this.completer,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +75,10 @@ class InfoAlertDialog extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: const Text(
                   'Got it',
                   style: TextStyle(
@@ -82,10 +86,6 @@ class InfoAlertDialog extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
             )
