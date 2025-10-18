@@ -11,14 +11,14 @@ jobs:
     name: Linting and Testing
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
       - run: flutter pub get
-      - run: dart format --fix --set-exit-if-changed .
+      - run: dart format --set-exit-if-changed .
       # - run: flutter analyze
       # - run: flutter test --coverage
       # - name: Setup LCOV
