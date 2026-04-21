@@ -20,7 +20,7 @@ jobs:
           channel: 'stable'
       - run: flutter pub get
       - name: release
-        uses: cycjimmy/semantic-release-action@v5
+        uses: cycjimmy/semantic-release-action@v6.0.0
         with:
           extra_plugins: |
             @semantic-release/exec
